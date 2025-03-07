@@ -50,6 +50,21 @@ class Magic:
                 if i != n // i:
                     suma += n // i
         return suma == n
+
+    def es_numero_armstrong(self, n):
+        """
+        Verifica si un número es un número de Armstrong.
+
+        Args:
+            n (int): Número a verificar
+
+        Returns:
+            bool: True si es un número de Armstrong, False en caso contrario
+        """
+        num_str = str(n)
+        num_digitos = len(num_str)
+        suma = sum(int(digito) ** num_digitos for digito in num_str)
+        return suma == n
     
     def triangulo_pascal(self, filas):
         if filas < 0:
