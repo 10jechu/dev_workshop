@@ -199,22 +199,15 @@ class Data:
             "is_empty": is_empty
         }
     
-    def matriz_transpuesta(self, matriz):
-        """
-        Calcula la transpuesta de una matriz.
-        
-        Args:
-            matriz (list): Lista de listas que representa una matriz
-            
-        Returns:
-            list: Matriz transpuesta
-        """
-        if not matriz:
-            return []
-        filas = len(matriz)
-        columnas = len(matriz[0])
-        transpuesta = [[0] * filas for _ in range(columnas)]
-        for i in range(filas):
-            for j in range(columnas):
-                transpuesta[j][i] = matriz[i][j]
-                return transpuesta
+def matriz_transpuesta(self, matriz):
+    if not matriz:
+        return []
+    filas = len(matriz)
+    columnas = len(matriz[0])
+    transpuesta = [[0] * filas for _ in range(columnas)]
+    
+    for i in range(filas):
+        for j in range(columnas):
+            transpuesta[j][i] = matriz[i][j]  
+    
+    return transpuesta  
