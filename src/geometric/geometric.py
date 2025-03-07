@@ -74,9 +74,14 @@ class Geometria:
         return (y2 - y1) / (x2 - x1)
     
     def ecuacion_recta(self, x1, y1, x2, y2):
+        if x1 == x2:  # Línea vertical
+            return (1, 0, -x1)
+        if y1 == y2:  # Línea horizontal (corregido)
+            return (0, 1, -y1)  
+        
         A = y2 - y1
         B = x1 - x2
-        C = x2 * y1 - x1 * y2
+        C = (x2 * y1) - (x1 * y2)
         return (A, B, C)
     
     def area_poligono_regular(self, num_lados, lado, apotema):
