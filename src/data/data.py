@@ -217,4 +217,4 @@ class Data:
         for i in range(filas):
             for j in range(columnas):
                 transpuesta[j][i] = matriz[i][j]
-               
+                return transpuesta
