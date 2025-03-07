@@ -74,9 +74,9 @@ class Geometria:
         return (y2 - y1) / (x2 - x1)
     
     def ecuacion_recta(self, x1, y1, x2, y2):
-        if x1 == x2:  # Línea vertical
+        if x1 == x2: 
             return (1, 0, -x1)
-        if y1 == y2:  # Línea horizontal (corregido)
+        if y1 == y2:  
             return (0, 1, -y1)  
         
         A = y2 - y1
