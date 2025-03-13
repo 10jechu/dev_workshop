@@ -23,19 +23,13 @@ class Strings:
         return sum(1 for char in texto if char.isalpha() and char not in vocales)
     
     def es_anagrama(self, texto1, texto2):
-        texto1 = texto1.lower().replace(" ", "")
-        texto2 = texto2.lower().replace(" ", "")
-        return sorted(texto1) == sorted(texto2)
+        return sorted(texto1.replace(" ", "").lower()) == sorted(texto2.replace(" ", "").lower())
     
     def contar_palabras(self, texto):
-        return len(texto.split()) if texto.strip() else 0
+        return len(texto.split())
     
     def palabras_mayus(self, texto):
-        """
-        Pon en mayúscula la primera letra de cada palabra en una cadena,
-        manteniendo los espacios originales.
-        """
-        return "".join(palabra.capitalize() if palabra else " " for palabra in texto.split(" "))
+        return " ".join([palabra.capitalize() for palabra in texto.split()])
     
     def eliminar_espacios_duplicados(self, texto):
         return " ".join(texto.split())
